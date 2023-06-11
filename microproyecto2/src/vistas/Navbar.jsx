@@ -14,6 +14,7 @@ export const Navbar = () => {
   return (
 
     <nav>
+       
         <NavLink style={navLinktyles} to = "/"> Home</NavLink>
 
         <NavLink style={navLinktyles} to = "/peliculas">Peliculas</NavLink>

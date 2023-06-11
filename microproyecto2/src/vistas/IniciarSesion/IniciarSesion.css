@@ -1,0 +1,9 @@
+.authform{
+    background-color: white;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    padding: 2vw;
+    border-radius: 2vw;
+}
