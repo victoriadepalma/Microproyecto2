@@ -89,64 +89,58 @@ nav ul {
 } */
 
 
+
 .carousel {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.slides {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.slide {
-  flex: 1;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  position: relative;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-
+  
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    flex: 0 0 37%; /* Ancho de cada diapositiva igual al 100% del ancho total */
+    height: 100%;
+    margin: 0;
+  }
+  
   .slide img {
-  width: 100%;
-  max-height: 90vh;
-  object-fit: cover;
-}
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
 
 
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
-  border: none;
-  padding: 16px;
-  font-size: 24px;
-  cursor: pointer;
-}
 
-.prev {
-  left: 0;
-}
 
-.next {
-  right: 0;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 20%;
-}
 
 .grid {
   display: grid;
