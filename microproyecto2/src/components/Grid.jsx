@@ -49,44 +49,56 @@
 
 // export default Grid;
 
-import React from "react";
+import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Grid.module.css";
+import Peliculas from "./Peliculas";
 
-function Grid({ movies }) {
+function Grid({ movies,genres }) {
+  const navigate=useNavigate()
+  const getGenres=(array)=>{
+    let aux=[]
+    for(let i=0;i<genres.length;i++){
+      console.log(genres[i].id,array)
+      if(array.includes(genres[i].id)){
+        console.log('kkkkk')
+aux.push(genres[i])
+      }
+    }
+  console.log(aux)
+return aux
+  }
+  
   return (
     <div className={styles.grid}>
       {movies.map(movie => (
-        <div key={movie.id} className={styles.movie}>
-          <div className={styles.movieContainer}>
-            
-            <img
-              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-              alt={movie.title}
-             
-            />
-            
-            
-            {/* <div>
-            <h3>{movie.title}</h3>
-            <h3>{movie.original_language}</h3>
-            </div> */}
-            
-            
-
-            <div className="movieContainer">
-  
-  <h3 className="title">{movie.title}</h3>
-  <h3 className="language">Idioma: {movie.original_language}</h3>
-</div>
-
-          </div>
-          <h3>{movie.title}</h3>
+      <div className={styles.movie} onClick={()=>{navigate(`/movies/${movie.id.toString()}`)}}>
+      <img  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}/>
+      <div className={styles.hoverEffect}>
+        <h1>{movie.title}</h1>
+        <h2>Idioma: {movie.original_language}</h2>
+        <div className={styles.genre}>
+          <h3>Generos: </h3>
+        {getGenres(movie.genre_ids).map((genre) => (
+          <>
+                <h3>{genre.name}</h3>
+                <h3 className={styles.comma}>,</h3>
+                </>
+              ))}
+              
+              <h3 className={styles.dot}>.</h3>
+              </div>
+      </div>
+         
         </div>
+        
+        
       
         
       ))}
     </div>
   );
+  
 }
 
 export default Grid;

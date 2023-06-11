@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import React from 'react'
+import logo from '../../imagenes/logo2.png';
 
 export const Navbar = () => {
     const navLinktyles = ( {isActive }) => {
@@ -12,8 +13,13 @@ export const Navbar = () => {
     }
 
   return (
-
     <nav>
+
+<div className="logoContainer">
+<img src={logo}></img>
+</div>
+<div className="navbar">
+
        
         <NavLink style={navLinktyles} to = "/"> Home</NavLink>
 
@@ -28,6 +34,8 @@ export const Navbar = () => {
       
 
 
+ 
+    </div>
     </nav>
     
   )

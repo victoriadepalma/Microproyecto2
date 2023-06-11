@@ -1,106 +1,92 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
+  width: 96vw;
+  max-width: 96vw;
+  overflow-x: hidden;
+  height: fit-content;
   justify-content: space-between;
   margin-top: 200px;
-  padding: 100px;
+  padding: 0px;
 }
-
-.movie {
-  width: calc(25% - 10px); /* El ancho de cada película es del 25% menos 10px de espacio */
-  margin-bottom: 30px; /* Ajuste el espacio entre las filas */
-  margin-left: 5px;
-  margin-right: 5px;
+.movie{
+  width: 20vw;
+  height: 25vw;
+  margin: 2vw;
+  border-radius: 2vw;
+  position: relative;
   display: flex;
-  flex-direction: column; /* Establezca la dirección del flujo de columna */
-  align-items: center; /* Centrar elementos horizontalmente */
-  text-align: center; /* Centrar elementos verticalmente */
+  cursor: pointer;
 }
-
-
-
-.movieContainer {
-  position: relative;
-  width: 100%;
-  display: inline-block;
-}
-
-.movieContainer:hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 93%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1;
-}
-
-.movie h3 {
-  font-size: 1rem;
-  margin: 0;
-  color: white;
-  font-weight: bold;
-  position: relative;
-  z-index: 2;
-}
-
-.movie img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-bottom: 10px; /* Ajuste el espacio entre la imagen y el título */
-}
-
-
-
-
-
-.movieContainer {
-  position: relative;
-}
-
-.movieContainer:hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.movie img{
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1;
+  display: flex;
+  border-radius: 2vw;
+  cursor: pointer;
 }
 
-.movieContainer:hover h3 {
+.genre{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+.hoverEffect{
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  z-index: 2;
+  background-color: rgba(17,17,17,1);
+  border-radius: 2vw;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+}
+
+.movie:hover > .hoverEffect{
+  visibility: visible;
   opacity: 1;
+  background-color: rgba(17,17,17,0.8);
+
+
 }
 
-.movieContainer h3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-} 
+.hoverEffect > h1{
+  font-size: 1vw;
+  margin: 0;
+  margin-bottom: 1vw;
+  
+}
+.hoverEffect > h2{
+  font-size: 0.8vw;
+  margin: 0;
+  
+}
 
-.movieContainer:hover h3.language {
+.genre > h3{
+  font-size: 0.8vw;
+  margin: 0; 
+  margin-right:0.2vw
+}
 
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out
+.comma:last-of-type{
+  display: none;
+}
+
+.dot{
+  display: none;
+}
+
+.dot:last-of-type{
+  display: contents;
+  margin-left:-0.2vw;
 }

@@ -9,7 +9,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-  
+  padding:2vw;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -34,6 +34,7 @@ body {
   /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
+  padding:2vw;
   background-color: #0c120c;
 }
 
@@ -61,20 +62,64 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } 
 
+
 nav{
-  background-color: #c20114;
-  padding: 30px 32px;
+  
   display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
  
   
+}
+
+.navbar{
+  background-color: #2e2e2e;
+  width: fit-content;
+  padding-right:2vw;
+  padding-left:2vw;
+  padding-top:1vw;
+  padding-bottom: 1vw;
+border-radius: 100vw;
+}
+
+.logoContainer{
+  height: 3vw;
+  width: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e2e2e;
+  border-radius: 100vw;
+}
+.logoContainer img{
+width: 60%;
+height: 60%;
+object-fit: contain;
+
 }
   
 
 nav a{
-  margin-right: 100px;
-  color: #c7d6d5;
+  margin-right: 2vw;
+  color: rgba(255,255,255,0.6);
   font-size: 20px;
+  font-size: 1vw;
+  text-transform: uppercase;
+  font-weight:bold;
   
+}
+
+nav a:hover{
+ 
+  color: rgba(255,255,255,1);;
+}
+
+nav a:focus{
+  color: rgba(255,255,255,1);
+  text-decoration: none;
 }
 
 nav ul {
@@ -90,53 +135,6 @@ nav ul {
 
 
 
-.carousel {
-  
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-  }
-  
-  .slides {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease;
-  }
-  
-  .slide {
-    flex: 0 0 37%; /* Ancho de cada diapositiva igual al 100% del ancho total */
-    height: 100%;
-    margin: 0;
-  }
-  
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60px;
-    height: 50px;
-    background-color: white;
-    color: black;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .prev {
-    left: 0;
-  }
-  
-  .next {
-    right: 0;
-  }
 
 
 
@@ -165,6 +163,7 @@ nav ul {
 
 .footer {
   background-color: #c20114;
+  border-radius: 2vh;
   padding: 50px 0;
   font-size: 16px;
   color: #ecebf3;
@@ -256,4 +255,119 @@ nav ul {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.slider{
+  width: 96vw;
+  height: 70vh;
+  border-radius: 5vw;
+  border-bottom-right-radius: 96vw;
+  overflow: hidden;
+  position: relative;
+  margin-top:2vw;
+}
+.slides{
+width: 500%;
+height: 70vh;
+display: flex;
+
+}
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition:2s
+}
+
+.slide img{
+  width:96vw;
+  height: 70vh;
+}
+
+.navigation-manual{
+position: absolute;
+width: 96vw;
+bottom: 40px;
+display: flex;
+justify-content: center;
+display: none;
+}
+
+.manual-btn{
+  border:2px solid red;
+  padding: 5px;
+  cursor: pointer;
+  transition:1s;
+  border-radius: 96vw;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background-color: red;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+#radio5:checked ~ .first{
+  margin-left: -60%;
+}
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 96vw;
+  justify-content: center;
+  margin-top:0px;
+  bottom: 40px;
+  display: none;
+}
+
+.navigation-auto > div{
+  border:2px solid red;
+  padding: 5px;
+  cursor: pointer;
+  transition:1s;
+  border-radius: 96vw;
+}
+
+.navigation-auto > div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+ background-color: red;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background-color: red;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background-color: red;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background-color: red;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn4{
+  background-color: red;
 }
