@@ -19,11 +19,13 @@ export const Navbar = () => {
 
         <NavLink style={navLinktyles} to = "/peliculas">Peliculas</NavLink>
 
-        <NavLink style={navLinktyles} to ="/iniciars">Iniciar Sesion</NavLink>
+        <NavLink style={navLinktyles} to ="/Signup">Registrarse</NavLink>
 
-        <NavLink style={navLinktyles} to ="/registro">Registrarse</NavLink>
+        <NavLink style={navLinktyles} to ="/Login">Iniciar Sesion</NavLink>
 
         <NavLink style={navLinktyles} to ="/perfil">Perfil</NavLink>
+
+      
 
 
     </nav>

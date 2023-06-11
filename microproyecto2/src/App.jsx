@@ -5,12 +5,16 @@
 
 import { Routes, Route } from "react-router-dom";
 import React from 'react';
-import Home from './vistas/Home.jsx';
-import Peliculas from './vistas/Peliculas.jsx';
-import { Navbar } from "./vistas/Navbar.jsx";
-import { IniciarS } from "./vistas/IniciarS.jsx";
-import Footer from "./vistas/Footer.jsx";
-import Grid from "./vistas/Grid.jsx";
+import Home from './components/Home.jsx';
+import Peliculas from './components/Peliculas.jsx';
+import { Navbar } from "./components/Navbar.jsx";
+import { IniciarS } from "./components/IniciarS.jsx";
+import Footer from "./components/Footer.jsx";
+import Grid from "./components/Grid.jsx";
+import { Signup } from "./components/Signup.jsx";
+import { Login } from "./components/Login.jsx"
+import { Info } from "./components/Info.jsx"
+
 // import { Auth } from "./vistas/IniciarSesion/Auth";
 // import React, { useState } from 'react';
 // import { onAuthStateChanged } from "firebase/auth"
@@ -31,10 +35,13 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="peliculas" element={<Peliculas title="The Godfather" description="A classic crime film" />} />
-        <Route path="iniciarsesion" element={<IniciarS/>} />
+        <Route path="peliculas" element={<Peliculas />} />
+        <Route path="/Signup" element={<Signup />}/>
+        <Route path="/Login" element={<Login />}/>
+       
+        
       </Routes>
-      <Grid/>
+      
       <Footer/>
     </div>
     </>

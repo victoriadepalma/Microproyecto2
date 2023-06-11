@@ -1,0 +1,106 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 200px;
+  padding: 100px;
+}
+
+.movie {
+  width: calc(25% - 10px); /* El ancho de cada película es del 25% menos 10px de espacio */
+  margin-bottom: 30px; /* Ajuste el espacio entre las filas */
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column; /* Establezca la dirección del flujo de columna */
+  align-items: center; /* Centrar elementos horizontalmente */
+  text-align: center; /* Centrar elementos verticalmente */
+}
+
+
+
+.movieContainer {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.movieContainer:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 93%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.movie h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+}
+
+.movie img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Ajuste el espacio entre la imagen y el título */
+}
+
+
+
+
+
+.movieContainer {
+  position: relative;
+}
+
+.movieContainer:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.movieContainer:hover h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 2;
+  opacity: 1;
+}
+
+.movieContainer h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+} 
+
+.movieContainer:hover h3.language {
+
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out
+}

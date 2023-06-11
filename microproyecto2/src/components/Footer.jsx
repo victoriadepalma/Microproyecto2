@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-6">
        
-            <p>Suramericana de Espectáculos S.A. RIF: J-00045832-4 || © Copyright 2022. Cinex. Todos los derechos reservados</p>
+            <p>Suramericana de Espectáculos S.A. RIF: J-00045832-4 || © Copyright 2023. CINENOVA. Todos los derechos reservados</p>
           </div>
           <div className="col-md-6">
            
