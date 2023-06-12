@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import { useParams } from "react-router-dom";
+import './Info.css';
 
 export const Info = () => {
    const[movie, setMovie]=useState(null)
@@ -21,15 +22,25 @@ export const Info = () => {
   }, []);
   return (
     <div>
-      {movie !=null ?
+    {movie != null ? (
       <div className="info-imagen">
-             <img  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}/>
-
-      </div>:
-      <div>No se ha encotrado informacion</div> //else si no encuentra id
-      }
-      
-    </div>
+        <img
+          className="foto"
+          src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+        />
+        <div className="descripcion-container">
+          <h2>{movie.title}</h2>
+          <div className="descripcion">
+            <p id = "idioma">Idioma: {movie.original_language}</p>
+            <p>Sinopsis: {movie.overview}</p>
+            <p>Popularidad: {movie.popularity}</p>
+            <p>Fecha de Estreno: {movie.release_date}</p>
+          </div>
+        </div>
+      </div>
+    ) : (
+      <div>No se ha encontrado información</div>
+    )}
+  </div>
   );
-
 }

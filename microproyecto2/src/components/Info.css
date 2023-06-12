@@ -1,0 +1,33 @@
+.info-imagen {
+    display: flex;
+    align-items: center; /* center items vertically */
+  }
+  
+  .foto {
+    margin-right: 20px; /* add some space between image and text */
+    border-radius: 2vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+  
+  .descripcion-container {
+    display: flex;
+    flex-direction: column;
+    padding: 3vh;
+    color: rgba(255,255,255,0.6);
+  }
+  
+  .descripcion {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h2 {
+    margin-top: 0;
+    font-size: 7vh;
+    text-align: center;
+  }
+
+  
+
+  

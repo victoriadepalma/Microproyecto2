@@ -295,6 +295,8 @@ justify-content: center;
 display: none;
 }
 
+
+
 .manual-btn{
   border:2px solid red;
   padding: 5px;
@@ -302,6 +304,7 @@ display: none;
   transition:1s;
   border-radius: 96vw;
 }
+
 
 .manual-btn:not(:last-child){
   margin-right: 40px;
@@ -371,3 +374,4 @@ display: none;
 #radio5:checked ~ .navigation-auto .auto-btn4{
   background-color: red;
 }
+

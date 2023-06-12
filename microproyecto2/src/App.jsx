@@ -12,12 +12,14 @@ import { IniciarS } from "./components/IniciarS.jsx";
 import Footer from "./components/Footer.jsx";
 import Grid from "./components/Grid.jsx";
 import { Signup } from "./components/Signup.jsx";
-import { Login } from "./components/Login.jsx"
-import { Info } from "./components/Info.jsx"
+import { Login } from "./components/Login.jsx";
+import { Info } from "./components/Info.jsx";
+import Upcoming from "./components/Upcoming.jsx"
+
 
 // import { Auth } from "./vistas/IniciarSesion/Auth";
 // import React, { useState } from 'react';
-// import { onAuthStateChanged } from "firebase/auth"
+// import { onAuthStateChan `ged } from "firebase/auth"
 // import { auth } from "./configuracion/firebase";
 // import { db } from "./configuracion/firebase";
 // import { doc, getDoc } from "firebase/firestore";
@@ -35,10 +37,12 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="peliculas" element={<Peliculas />} />
+        <Route path="/peliculas" element={<Peliculas />} />
         <Route path="/Signup" element={<Signup />}/>
         <Route path="/Login" element={<Login />}/>
         <Route path="/movies/:movieId" element={<Info/>} />
+        <Route path="/proximos-estrenos" element={<Upcoming />} />
+   
        
         
       </Routes>

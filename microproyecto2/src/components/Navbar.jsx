@@ -31,6 +31,10 @@ export const Navbar = () => {
 
         <NavLink style={navLinktyles} to ="/perfil">Perfil</NavLink>
 
+       <NavLink style={navLinktyles} to ="/proximos-estrenos">Proximos Estrenos</NavLink>
+
+
+
       
 
 

@@ -75,7 +75,9 @@ return aux
       <div className={styles.movie} onClick={()=>{navigate(`/movies/${movie.id.toString()}`)}}>
       <img  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}/>
       <div className={styles.hoverEffect}>
+
         <h1>{movie.title}</h1>
+       
         <h2>Idioma: {movie.original_language}</h2>
         <div className={styles.genre}>
           <h3>Generos: </h3>
@@ -89,9 +91,9 @@ return aux
               <h3 className={styles.dot}>.</h3>
               </div>
       </div>
-         
-        </div>
         
+        </div>
+      
         
       
         
