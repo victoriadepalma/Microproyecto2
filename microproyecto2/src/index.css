@@ -586,6 +586,15 @@ display: none;
     position: relative;
     margin-top:2vw;
   }
+  .info-imagen{
+    flex-direction: column;
+    align-items: center;
+  }
+  .foto {
+    width: 96vw !important;
+    height: 110vw !important;
+    margin-right: 0;
+}
   .slides{
   width: 500%;
   height: 70vh;
@@ -596,6 +605,19 @@ display: none;
     display: none;
   }
   
+  .button-release{
+    font-size: 4vw;
+    width: 96vw;
+    padding: 3vw 5vw;
+    border-radius: 2vw;
+  }
+
+  .button-reservar{
+    font-size: 4vw;
+    width: 96vw;
+    padding: 3vw 5vw;
+    border-radius: 2vw;
+  }
   .slide{
     width: 20%;
     transition:2s
