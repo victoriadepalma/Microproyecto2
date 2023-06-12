@@ -109,9 +109,9 @@ export const Info = () => {
                         color={liked ? "#c20114" :"rgba(255,255,255,0.6)"}
                       />
           }
-          <h2>{movie.title}</h2>
+          <h2 className = "pel_tit">{movie.title}</h2>
           <div className="descripcion">
-            <p id = "idioma">Idioma: {movie.original_language}</p>
+            <p className = "idioma">Idioma: {movie.original_language}</p>
             <p>Sinopsis: {movie.overview}</p>
             <p>Popularidad: {movie.popularity}</p>
             <p>Fecha de Estreno: {movie.release_date}</p>

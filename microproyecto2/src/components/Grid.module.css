@@ -9,6 +9,8 @@
   margin-top: 2vw;
   padding: 0px;
 }
+
+
 .movie{
   width: 20vw;
   height: 25vw;
@@ -89,4 +91,24 @@
 .dot:last-of-type{
   display: contents;
   margin-left:-0.2vw;
+}
+
+@media screen and (max-width: 768px){
+ 
+.movie{
+  width: 42vw;
+  height: 50vw;
+  margin: 2vw;
+  border-radius: 2vw;
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+.movie img{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 2vw;
+  cursor: pointer;
+}
 }
