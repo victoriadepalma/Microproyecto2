@@ -101,12 +101,14 @@ export const Info = () => {
           src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
         />
         <div className="descripcion-container">
+          {user !=null &&
         <FontAwesomeIcon
         onClick={()=>{if(liked==false){setLiked(true);like()}}}
                       icon={faHeart}
                       className="like"
                         color={liked ? "#c20114" :"rgba(255,255,255,0.6)"}
                       />
+          }
           <h2>{movie.title}</h2>
           <div className="descripcion">
             <p id = "idioma">Idioma: {movie.original_language}</p>
