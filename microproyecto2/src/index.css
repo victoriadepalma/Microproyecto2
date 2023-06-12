@@ -41,7 +41,56 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-} */
+} 
+
+.searchbar{
+  background-color: #2E2E2E;
+  border-radius: 100vw;
+height: 5vh;
+padding-left: 0.5vw;
+padding-right: 0.5vw;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2vw;
+}
+
+.searchbar > input{
+  width: 5vw;
+  transition: 1s;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1vw;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.searchbar > input::placeholder{
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  font-size: 1vw;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.searchbar >input:focus{
+  width: 15vw;
+}
+
+.search-container{
+  background-color: #171717;
+  width: 2.2vw;
+  height: 2.2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100vw;
+  margin-right: 0.5vw;
+}
+.search-icon{
+  font-size: 1vw;
+}
 
 button {
   border-radius: 8px;

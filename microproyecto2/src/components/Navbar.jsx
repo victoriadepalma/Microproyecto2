@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import React from "react";
-import logo from "../../imagenes/logo2.png";
+import logo from "../imagenes/logo2.png";
 import { UserAuth } from "../context/AuthContext";
 
 export const Navbar = () => {
@@ -29,8 +29,9 @@ export const Navbar = () => {
         <NavLink style={navLinktyles} to="/proximos-estrenos">
           Proximos Estrenos
         </NavLink>
-{user== null &&
-<>
+
+      {user== null &&
+        <>
         <NavLink style={navLinktyles} to="/Signup">
           Registrarse
         </NavLink>
@@ -39,6 +40,7 @@ export const Navbar = () => {
           Iniciar Sesion
         </NavLink>
         </>}
+
         {user !=null &&
         <>
       
