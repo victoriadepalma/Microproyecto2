@@ -59,13 +59,13 @@ function Grid({ movies,genres }) {
   const getGenres=(array)=>{
     let aux=[]
     for(let i=0;i<genres.length;i++){
-      console.log(genres[i].id,array)
+ 
       if(array.includes(genres[i].id)){
         console.log('kkkkk')
 aux.push(genres[i])
       }
     }
-  console.log(aux)
+
 return aux
   }
   

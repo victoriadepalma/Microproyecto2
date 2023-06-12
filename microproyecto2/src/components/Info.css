@@ -15,8 +15,20 @@
     flex-direction: column;
     padding: 3vh;
     color: rgba(255,255,255,0.6);
+    position: relative;
+  }
+
+  .like{
+    position: absolute;
+    right: 0;
+    font-size: 2vw;
+    cursor: pointer;
+    transition: 1s;
   }
   
+  .like:hover{
+    color: #c20114;
+  }
   .descripcion {
     display: flex;
     flex-direction: column;
